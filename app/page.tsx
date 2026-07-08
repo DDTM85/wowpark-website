@@ -37,19 +37,19 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white text-gray-800 min-h-screen font-sans">
+    <div className="bg-white text-gray-800 min-h-screen font-sans overflow-x-hidden">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b-2 border-orange-400 shadow-md">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <img src="/logo.png" alt="WOW Logo" className="h-20 w-auto" />
-          <div className="hidden md:flex gap-8 text-sm font-medium items-center">
-            <a href="#attractions" className="hover:text-orange-600 transition">Attractions</a>
-            <a href="#birthday" className="hover:text-orange-600 transition">Birthday Parties</a>
-            <a href="#pricing" className="hover:text-orange-600 transition">Pricing</a>
-            <a href="#contact" className="hover:text-orange-600 transition">Contact</a>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
+          <img src="/logo.png" alt="WOW Logo" className="h-14 md:h-20 w-auto" />
+          <div className="flex gap-2 md:gap-8 text-xs md:text-sm font-medium items-center flex-wrap justify-center md:justify-end">
+            <a href="#attractions" className="hover:text-orange-600 transition whitespace-nowrap">Attractions</a>
+            <a href="#birthday" className="hover:text-orange-600 transition whitespace-nowrap">Birthday Parties</a>
+            <a href="#pricing" className="hover:text-orange-600 transition whitespace-nowrap">Pricing</a>
+            <a href="#contact" className="hover:text-orange-600 transition whitespace-nowrap">Contact</a>
             <a
               href="tel:+97440001109"
-              className="px-6 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full hover:shadow-lg transition"
+              className="px-4 md:px-6 py-1 md:py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs md:text-sm font-bold rounded-full hover:shadow-lg transition whitespace-nowrap"
             >
               Book Now
             </a>
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('/bg2.jpg')] bg-cover bg-center opacity-30"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-8 h-full flex flex-col items-center justify-center text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 h-full flex flex-col items-center justify-center text-center">
           <div className="mb-6 animate-bounce">
             <div className="text-7xl font-black text-white drop-shadow-lg">WOW</div>
           </div>
@@ -75,13 +75,13 @@ export default function Home() {
           <div className="flex gap-6 flex-wrap justify-center">
             <a
               href="tel:+97440001109"
-              className="px-8 py-4 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition text-lg shadow-lg"
+              className="px-6 md:px-8 py-3 md:py-4 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition text-base md:text-lg shadow-lg"
             >
               Call to Book
             </a>
             <a
               href="#attractions"
-              className="px-8 py-4 bg-white text-orange-600 font-bold rounded-full hover:bg-orange-50 transition text-lg shadow-lg"
+              className="px-6 md:px-8 py-3 md:py-4 bg-white text-orange-600 font-bold rounded-full hover:bg-orange-50 transition text-base md:text-lg shadow-lg"
             >
               Explore Now
             </a>
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-12 px-8 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+      <section className="py-12 px-4 md:px-8 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'15\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'60\' cy=\'20\' r=\'12\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'40\' cy=\'50\' r=\'18\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'70\' cy=\'60\' r=\'10\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3C/svg%3E")', backgroundRepeat: 'repeat'}}></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center text-white">
@@ -116,14 +116,14 @@ export default function Home() {
       </section>
 
       {/* Summer Schedule */}
-      <section className="py-12 px-8 bg-white">
+      <section className="py-12 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <img src="/summer-sched.png" alt="Summer Schedule" className="max-w-2xl mx-auto rounded-2xl shadow-lg" />
+          <img src="/summer-sched.png" alt="Summer Schedule" className="max-w-full md:max-w-2xl mx-auto rounded-2xl shadow-lg" />
         </div>
       </section>
 
       {/* About */}
-      <section className="py-20 px-8 bg-gradient-to-b from-white to-orange-50">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-white to-orange-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-12 text-center">About WOW</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* Main Attractions */}
-      <section id="attractions" className="py-20 px-8 bg-white">
+      <section id="attractions" className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">Amazing Attractions</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Thrills, adventures, and fun for every age</p>
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Video Gallery */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">See WOW In Action</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Watch families and friends create magical memories</p>
@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* Birthday Parties */}
-      <section id="birthday" className="py-20 px-8 bg-gradient-to-b from-orange-50 to-white">
+      <section id="birthday" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-orange-50 to-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">Birthday Parties</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Unforgettable celebrations for kids of all ages</p>
@@ -274,7 +274,7 @@ export default function Home() {
             <div className="relative z-10">
             <h3 className="text-3xl font-bold mb-4">Ready to Celebrate?</h3>
             <p className="text-lg mb-6">Contact our party planners for custom packages</p>
-            <a href="tel:+97450505154" className="px-8 py-4 bg-white text-orange-600 font-bold rounded-full hover:bg-gray-100 transition text-lg inline-block">
+            <a href="tel:+97450505154" className="px-6 md:px-8 py-3 md:py-4 bg-white text-orange-600 font-bold rounded-full hover:bg-gray-100 transition text-base md:text-lg inline-block">
               Book Birthday Party
             </a>
             </div>
@@ -283,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* School Trips */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">School Trips & Groups</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Educational fun for team building and learning</p>
@@ -350,7 +350,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 px-8 bg-gradient-to-b from-orange-50 to-white">
+      <section id="pricing" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-orange-50 to-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">Simple Pricing</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Great value for unlimited fun</p>
@@ -410,7 +410,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Carousel */}
-      <section className="py-20 px-8 bg-white">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">Guest Reviews</h2>
           <p className="text-center text-gray-600 mb-16 text-lg">Loved by families across Doha</p>
@@ -491,7 +491,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 px-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white relative overflow-hidden">
+      <section id="contact" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'15\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'60\' cy=\'20\' r=\'12\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'40\' cy=\'50\' r=\'18\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3Ccircle cx=\'70\' cy=\'60\' r=\'10\' fill=\'none\' stroke=\'white\' stroke-width=\'2\'/%3E%3C/svg%3E")', backgroundRepeat: 'repeat'}}></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-5xl font-black mb-12 text-center">Get In Touch</h2>
@@ -540,7 +540,7 @@ export default function Home() {
             <p className="text-lg mb-4">Follow us for updates and special offers</p>
             <div className="flex gap-6 justify-center">
               <a href="https://instagram.com/wowparkdoha" target="_blank" className="hover:opacity-75 transition" title="Instagram">
-                <img src="/inst.png" alt="Instagram" className="w-8 h-8" />
+                <img src="/Inst.png" alt="Instagram" className="w-8 h-8" />
               </a>
               <a href="https://wa.me/97440001109" target="_blank" className="hover:opacity-75 transition" title="WhatsApp">
                 <img src="/whatsapp.png" alt="WhatsApp" className="w-8 h-8" />
@@ -551,7 +551,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-8 bg-gray-900 text-gray-400 text-sm text-center">
+      <footer className="py-8 px-4 md:px-8 bg-gray-900 text-gray-400 text-sm text-center">
         <p>WOW (World of Wonders) © 2026 | 60+ Activities • 3 Floors • Endless Fun</p>
       </footer>
 
