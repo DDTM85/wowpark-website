@@ -77,9 +77,9 @@ export default function Home() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 h-full flex flex-col items-center justify-center text-center">
           <div className="mb-6 animate-bounce">
-            <div className="text-7xl font-black text-white drop-shadow-lg">WOW</div>
+            <div className="text-5xl md:text-6xl font-black text-white drop-shadow-lg">WOW</div>
           </div>
-          <h1 className="text-6xl md:text-7xl font-black text-white mb-6 drop-shadow-lg leading-tight">
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6 drop-shadow-lg leading-tight">
             WORLD OF WONDERS
           </h1>
           <p className="text-2xl text-white mb-12 drop-shadow-md max-w-2xl">
@@ -99,7 +99,7 @@ export default function Home() {
               Explore Now
             </a>
           </div>
-          <p className="text-white text-sm mt-12 drop-shadow-md">📍 Lusail Boulevard | Open 10am - Midnight</p>
+          <p className="text-white text-sm mt-12 drop-shadow-md">Lusail Boulevard | Open 10am - Midnight</p>
         </div>
       </section>
 
@@ -365,59 +365,79 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-orange-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-black text-orange-600 mb-4 text-center">Simple Pricing</h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">Great value for unlimited fun</p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white rounded-2xl border-2 border-orange-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-6">Individual Entry</h3>
-              <p className="text-gray-600 mb-6">Pay per activity or experience</p>
-              <div className="text-4xl font-black text-orange-600 mb-6">Flexible</div>
-              <ul className="space-y-3 text-gray-700">
-                <li>✓ Pick your activities</li>
-                <li>✓ Stay as long as you want</li>
-                <li>✓ No minimum spend</li>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left: Pricing explanation */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-black text-orange-600 mb-6">Unlimited Fun,<br />Smart Pricing</h2>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                Choose the plan that fits your visit. Whether you're picking individual activities or diving into unlimited attractions, we've got you covered.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✓</span>
+                  <div>
+                    <strong className="text-gray-800">Pay-As-You-Go</strong>
+                    <p className="text-gray-600">Pick activities, stay as long as you want</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✓</span>
+                  <div>
+                    <strong className="text-gray-800">VIP Pass</strong>
+                    <p className="text-gray-600">Unlimited 3-hour access to 60+ attractions</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">✓</span>
+                  <div>
+                    <strong className="text-gray-800">Group Packages</strong>
+                    <p className="text-gray-600">Special rates for schools, events & celebrations</p>
+                  </div>
+                </li>
               </ul>
+              <p className="text-sm text-gray-600 italic">Tip: Use The Entertainer app for exclusive Buy One Get One Free offers</p>
             </div>
 
-            <div className="p-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl border-2 border-orange-600 shadow-2xl text-white transform scale-105">
-              <div className="text-center">★★★ BEST VALUE ★★★</div>
-              <h3 className="text-3xl font-bold mb-6 text-center">VIP Pass</h3>
-              <p className="mb-6 text-center">Unlimited activities for 3 hours</p>
-              <div className="mb-6">
-                <div className="text-3xl font-black mb-2">60 QAR</div>
-                <div className="text-sm">Weekdays</div>
+            {/* Right: Pricing cards stacked */}
+            <div className="space-y-6">
+              <div className="p-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-xl text-white border-2 border-orange-600">
+                <div className="text-sm font-bold uppercase tracking-wider mb-3 opacity-90">Best Value</div>
+                <h3 className="text-3xl font-black mb-2">VIP Pass</h3>
+                <p className="text-sm mb-6 opacity-95">Unlimited activities, 3 hours</p>
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <div className="text-2xl font-black">60 QAR</div>
+                    <div className="text-xs opacity-90">Weekdays</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-black">175 QAR</div>
+                    <div className="text-xs opacity-90">Weekends</div>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm">
+                  <li>✓ All 60+ attractions</li>
+                  <li>✓ Free arcade games</li>
+                  <li>✓ Perfect for families</li>
+                </ul>
+                <a href="tel:+97440001109" className="mt-6 w-full px-4 py-2 bg-white text-orange-600 font-bold rounded-full hover:bg-gray-100 transition text-center block">
+                  Book VIP Pass
+                </a>
               </div>
-              <div className="mb-6">
-                <div className="text-3xl font-black mb-2">175 QAR</div>
-                <div className="text-sm">Weekends</div>
+
+              <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-orange-200">
+                <h3 className="text-2xl font-bold text-orange-600 mb-2">Group Packages</h3>
+                <p className="text-gray-600 mb-6 text-sm">Schools, events & celebrations</p>
+                <div className="text-4xl font-black text-orange-600 mb-6">Custom</div>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li>✓ Special group rates</li>
+                  <li>✓ Bulk discounts</li>
+                  <li>✓ Dedicated support</li>
+                </ul>
+                <a href="tel:+97440001109" className="mt-6 w-full px-4 py-2 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition text-center block text-sm">
+                  Get Group Quote
+                </a>
               </div>
-              <ul className="space-y-3">
-                <li>✓ 60+ attractions included</li>
-                <li>✓ Free arcade games</li>
-                <li>✓ Perfect for families</li>
-              </ul>
             </div>
-
-            <div className="p-8 bg-white rounded-2xl border-2 border-orange-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-600 mb-6">Group Packages</h3>
-              <p className="text-gray-600 mb-6">Perfect for schools & events</p>
-              <div className="text-4xl font-black text-orange-600 mb-6">Custom</div>
-              <ul className="space-y-3 text-gray-700">
-                <li>✓ Special group rates</li>
-                <li>✓ Bulk discounts</li>
-                <li>✓ Dedicated support</li>
-              </ul>
-              <a href="tel:+97440001109" className="mt-6 w-full px-4 py-2 bg-orange-600 text-white font-bold rounded-full hover:bg-orange-700 transition text-center block">
-                Contact Us
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-16 p-8 bg-yellow-100 rounded-2xl border-2 border-yellow-400 text-center">
-            <p className="text-lg text-gray-800">
-              <strong>💡 PRO TIP:</strong> Use The Entertainer app for exclusive "Buy One Get One Free" offers!
-            </p>
           </div>
         </div>
       </section>
@@ -577,31 +597,39 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-orange-600 mb-2">Get Exclusive Offers!</h3>
                 <p className="text-gray-600 mb-6">Subscribe for special deals and party tips</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full px-4 py-3 border-2 border-orange-300 rounded-lg focus:outline-none focus:border-orange-600 text-gray-800"
-                  />
+                  <div>
+                    <label htmlFor="email-input" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      id="email-input"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="w-full px-4 py-3 border-2 border-orange-300 rounded-lg focus:outline-none focus:border-orange-600 text-gray-800 bg-white"
+                    />
+                  </div>
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-3 rounded-lg hover:shadow-lg transition"
                   >
-                    Sign Me Up!
+                    Get Exclusive Offers
                   </button>
                 </form>
                 <button
                   onClick={handleClose}
                   className="mt-4 w-full text-gray-500 hover:text-gray-700 text-sm"
                 >
-                  No thanks
+                  Maybe later
                 </button>
               </>
             ) : (
               <div className="text-center">
-                <p className="text-orange-600 font-black text-lg mb-2">✓ Success!</p>
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl text-orange-600 font-bold">✓</span>
+                </div>
+                <p className="text-gray-800 font-bold text-lg mb-2">You're all set!</p>
                 <p className="text-gray-600">Check your email for exclusive offers</p>
               </div>
             )}
