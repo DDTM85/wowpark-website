@@ -40,18 +40,31 @@ export default function Home() {
     <div className="bg-white text-gray-800 min-h-screen font-sans overflow-x-hidden">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b-2 border-orange-400 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
-          <img src="/logo.png" alt="WOW Logo" className="h-14 md:h-20 w-auto" />
-          <div className="flex gap-2 md:gap-8 text-xs md:text-sm font-medium items-center flex-wrap justify-center md:justify-end">
-            <a href="#attractions" className="hover:text-orange-600 transition whitespace-nowrap">Attractions</a>
-            <a href="#birthday" className="hover:text-orange-600 transition whitespace-nowrap">Birthday Parties</a>
-            <a href="#pricing" className="hover:text-orange-600 transition whitespace-nowrap">Pricing</a>
-            <a href="#contact" className="hover:text-orange-600 transition whitespace-nowrap">Contact</a>
-            <a
-              href="tel:+97440001109"
-              className="px-4 md:px-6 py-1 md:py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs md:text-sm font-bold rounded-full hover:shadow-lg transition whitespace-nowrap"
-            >
-              Book Now
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
+            <img src="/logo.png" alt="WOW Logo" className="h-14 md:h-20 w-auto" />
+            <div className="flex gap-2 md:gap-8 text-xs md:text-sm font-medium items-center flex-wrap justify-center md:justify-end">
+              <a href="#attractions" className="hover:text-orange-600 transition whitespace-nowrap">Attractions</a>
+              <a href="#birthday" className="hover:text-orange-600 transition whitespace-nowrap">Birthday Parties</a>
+              <a href="#pricing" className="hover:text-orange-600 transition whitespace-nowrap">Pricing</a>
+              <a href="#contact" className="hover:text-orange-600 transition whitespace-nowrap">Contact</a>
+              <a
+                href="tel:+97440001109"
+                className="px-4 md:px-6 py-1 md:py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs md:text-sm font-bold rounded-full hover:shadow-lg transition whitespace-nowrap"
+              >
+                Book Now
+              </a>
+            </div>
+          </div>
+          <div className="flex gap-4 justify-center md:justify-end mt-2 md:mt-0">
+            <a href="https://instagram.com/wowparkdoha" target="_blank" className="hover:opacity-75 transition" title="Instagram">
+              <img src="/Inst.png" alt="Instagram" className="w-5 h-5 md:w-6 md:h-6" />
+            </a>
+            <a href="https://facebook.com/wowparkdoha" target="_blank" className="hover:opacity-75 transition" title="Facebook">
+              <img src="/fb.png" alt="Facebook" className="w-5 h-5 md:w-6 md:h-6" />
+            </a>
+            <a href="https://wa.me/97440001109" target="_blank" className="hover:opacity-75 transition" title="WhatsApp">
+              <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 md:w-6 md:h-6" />
             </a>
           </div>
         </div>
