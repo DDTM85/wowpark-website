@@ -448,8 +448,10 @@ export default function Home() {
             <button
               onClick={() => {
                 const carousel = document.getElementById('reviews-carousel');
-                const width = carousel.children[0].offsetWidth;
-                carousel.parentElement.scrollLeft -= width;
+                if (carousel) {
+                  const width = (carousel.children[0] as HTMLElement).offsetWidth;
+                  carousel.parentElement!.scrollLeft -= width;
+                }
               }}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 bg-orange-600 text-white p-3 rounded-full hover:bg-orange-700 transition z-10"
             >
@@ -458,8 +460,10 @@ export default function Home() {
             <button
               onClick={() => {
                 const carousel = document.getElementById('reviews-carousel');
-                const width = carousel.children[0].offsetWidth;
-                carousel.parentElement.scrollLeft += width;
+                if (carousel) {
+                  const width = (carousel.children[0] as HTMLElement).offsetWidth;
+                  carousel.parentElement!.scrollLeft += width;
+                }
               }}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 bg-orange-600 text-white p-3 rounded-full hover:bg-orange-700 transition z-10"
             >
@@ -474,8 +478,10 @@ export default function Home() {
                 key={idx}
                 onClick={() => {
                   const carousel = document.getElementById('reviews-carousel');
-                  const width = carousel.children[0].offsetWidth;
-                  carousel.parentElement.scrollLeft = idx * width;
+                  if (carousel) {
+                    const width = (carousel.children[0] as HTMLElement).offsetWidth;
+                    carousel.parentElement!.scrollLeft = idx * width;
+                  }
                 }}
                 className="w-3 h-3 rounded-full bg-orange-300 hover:bg-orange-600 transition"
               />
